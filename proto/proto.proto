@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+option go_package = "github.com/Divik-kid/Solotemp/tree/main";
+
+package proto;
+
+message Message{
+    string content = 1;
+    string userName = 2;
+}
+
+service ChatService{
+    rpc SendPost (Message) returns (Message);
+}
+
